@@ -1,9 +1,9 @@
-from rest_framework import viewsets 
-from apps.notes.models import Note 
+from apps.notes.models import Note
 from apps.notes.serializers import NoteSerializer
+from rest_framework import viewsets
+
 
 class NoteViewSet(viewsets.ModelViewSet):
-
     serializer_class = NoteSerializer
     queryset = Note.objects.all()
 
