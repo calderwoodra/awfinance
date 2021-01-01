@@ -11,7 +11,7 @@ class PasswordResetTest(APITestCase):
     send_reset_password_email_url = "/api/v1/users/reset_password/"
     confirm_reset_password_url = "/api/v1/users/reset_password_confirm/"
 
-    # user infofmation
+    # user information
     user_data = {
         "email": "test@example.com",
         "username": "test_user",
@@ -100,7 +100,7 @@ class EmailVerificationTest(APITestCase):
     resend_verification_url = "/api/v1/users/resend_activation/"
     login_url = "/api/v1/token/login/"
     user_details_url = "/api/v1/users/"
-    # user infofmation
+    # user information
     user_data = {
         "email": "test@example.com",
         "username": "test_user",
