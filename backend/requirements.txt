@@ -1,6 +1,6 @@
-django==3.1.4
 djoser==2.1.0
-djangorestframework==3.12.2 # https://github.com/sunscrapers/djoser/issues/541
-markdown==3.3.3
+django==3.1.4
+djangorestframework==3.11.2 # https://github.com/sunscrapers/djoser/issues/541
 django-filter==2.4.0
 django_cors_headers==3.6.0
+markdown==3.3.3
