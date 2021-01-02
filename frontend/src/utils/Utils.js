@@ -4,6 +4,7 @@ import {toast} from "react-toastify";
 export const setAxiosAuthToken = token => {
     if (typeof token !== "undefined" && token) {
         // Apply for every request
+        console.print(token)
         axios.defaults.headers.common["Authorization"] = "Token " + token;
     } else {
         // Delete auth header

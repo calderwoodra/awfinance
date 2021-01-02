@@ -9,6 +9,7 @@ export const login = (userData, redirectTo) => dispatch => {
         .post("/api/v1/token/login/", userData)
         .then(response => {
             const {auth_token} = response.data;
+            console.log(response.data)
             setAxiosAuthToken(auth_token);
             dispatch(setToken(auth_token));
             dispatch(getCurrentUser(redirectTo));
