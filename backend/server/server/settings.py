@@ -57,20 +57,20 @@ REST_FRAMEWORK = {
     ]
 }
 
+# Configure Custom User Model
+AUTH_USER_MODEL = 'accounts.User'
+
 # configure Djoser
 DJOSER = {
     "USER_ID_FIELD": "username",
-    "LOGIN_FIELD": "email",
-    "SEND_ACTIVATION_EMAIL": True,
+    "LOGIN_FIELD": "username",
+    "SEND_ACTIVATION_EMAIL": False,
     "ACTIVATION_URL": "activate/{uid}/{token}",
     "PASSWORD_RESET_CONFIRM_URL": "reset_password/{uid}/{token}",
     'SERIALIZERS': {
         'token_create': 'apps.accounts.serializers.CustomTokenCreateSerializer',
     },
 }
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-SITE_NAME = "SaaSitive"
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
