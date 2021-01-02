@@ -1,18 +1,15 @@
 # DIY Django and React Boilerplate for SaaS
 
-It is do-it-yourself Django + React Boilerplate for starting your SaaS
-application. In existing boilerplates for Django+React (or just for Django)
-there are very often too many features provided (do you really need traefik for
-MVP?). So before starting, you need to remove a lot of functionality that you
-don't need or simply don't understand.
+It is do-it-yourself Django + React Boilerplate for starting your SaaS application. In existing
+boilerplates for Django+React (or just for Django)
+there are very often too many features provided (do you really need traefik for MVP?). So before
+starting, you need to remove a lot of functionality that you don't need or simply don't understand.
 
-I decided to create a simple Django+React boilerplate with step-by-step
-instructions how to build it. During building you can decide what you need or
-not. And for sure you learn a lot about Django and React. I hope it will provide
-good and quick starting point for creating SaaS applications. I would like to
-create real SaaS applications based on this boilerplate with step-by-step
-tutorials how they were created. They will be available
-at [SaaSitive](https://saasitive.com) website.
+I decided to create a simple Django+React boilerplate with step-by-step instructions how to build
+it. During building you can decide what you need or not. And for sure you learn a lot about Django
+and React. I hope it will provide good and quick starting point for creating SaaS applications. I
+would like to create real SaaS applications based on this boilerplate with step-by-step tutorials
+how they were created. They will be available at [SaaSitive](https://saasitive.com) website.
 
 ## Features (already implemented or planned)
 
@@ -32,8 +29,8 @@ at [SaaSitive](https://saasitive.com) website.
 ## Live Website
 
 You can play with this bolierplate
-at: [https://boilerplate.saasitive.com](https://boilerplate.saasitive.com) -
-deployed to t2.micro EC2 instance with docker-compose.
+at: [https://boilerplate.saasitive.com](https://boilerplate.saasitive.com) - deployed to t2.micro
+EC2 instance with docker-compose.
 
 ## Step-by-step instructions:
 
