@@ -1,66 +1,91 @@
-# DIY Django and React Boilerplate for SaaS
+# Finance App
 
-It is do-it-yourself Django + React Boilerplate for starting your SaaS application. In existing
-boilerplates for Django+React (or just for Django)
-there are very often too many features provided (do you really need traefik for MVP?). So before
-starting, you need to remove a lot of functionality that you don't need or simply don't understand.
+End-to-end fin-tech app built using AWS, Docker, PostgreSQL, Django, ReactJs and Plaid.
 
-I decided to create a simple Django+React boilerplate with step-by-step instructions how to build
-it. During building you can decide what you need or not. And for sure you learn a lot about Django
-and React. I hope it will provide good and quick starting point for creating SaaS applications. I
-would like to create real SaaS applications based on this boilerplate with step-by-step tutorials
-how they were created. They will be available at [SaaSitive](https://saasitive.com) website.
+## Table of Contents
 
-## Features (already implemented or planned)
+- [Motivation](#motivation)
+- [About](#about)
+- [Setup](#setup)
+- [TODO](#todo)
 
-- Backend with Django Rest Framework
-- Frontend with React
-- Bootstrap for styling
-- Deployment with docker-compose on single VPS
-- SSL certificate from Let's encrypt
-- PostgreSQL database (not yet configured)
-- Authentication with DRF `authtoken`
-  and [Djoser](https://djoser.readthedocs.io/en/latest/)
-- AWS SES for Email sending (not yet implemented)
-- python-decuple for secrets
-- Payments with Stripe (not yet implemented)
-- Step-by-step instructions how to deploy and how to update application
+<a name="motivation"></a>
+## Motivation
 
-## Live Website
+#### One day, I hope to use technology to lift everyone in the world out of poverty.
 
-You can play with this bolierplate
-at: [https://boilerplate.saasitive.com](https://boilerplate.saasitive.com) - deployed to t2.micro
-EC2 instance with docker-compose.
+I'm currently pretty far from achieving that goal, prior to this project, I have very little
+experience working with any the technologies listed in this tech stack. So hopefully working on this
+project gets me a few steps closer to changing the world.
 
-## Step-by-step instructions:
+Also, I just love to build/ship/hack, so this project really feels perfect for me.
 
-1. [Starting SaaS with Django and React](https://saasitive.com/tutorial/django-react-boilerplate-saas/) (
-   tag [v1](https://github.com/saasitive/django-react-boilerplate/tree/v1))
-2. [React Routing and Components for Signup and Login](https://saasitive.com/tutorial/react-routing-components-signup-login/) (
-   tag [v2](https://github.com/saasitive/django-react-boilerplate/tree/v2))
-3. [Token Based Authentication with Django Rest Framework and Djoser](https://saasitive.com/tutorial/token-based-authentication-django-rest-framework-djoser/) (
-   tag [v3](https://github.com/saasitive/django-react-boilerplate/tree/v3))
-4. [React Token Based Authentication to Django REST API Backend](https://saasitive.com/tutorial/react-token-based-authentication-django/) (
-   tag [v4](https://github.com/saasitive/django-react-boilerplate/tree/v4))
-5. [React Authenticated Component](https://saasitive.com/tutorial/react-authenticated-component/)  (
-   tag [v5](https://github.com/saasitive/django-react-boilerplate/tree/v5))
-6. [CRUD in Django Rest Framework and React](https://saasitive.com/tutorial/crud-django-rest-framework-react/) (
-   tag [v6](https://github.com/saasitive/django-react-boilerplate/tree/v6))
-7. [Docker-Compose for Django and React with Nginx reverse-proxy and Let's encrypt certificate](https://saasitive.com/tutorial/docker-compose-django-react-nginx-let-s-encrypt/) (
-   tag [v7](https://github.com/saasitive/django-react-boilerplate/tree/v7))
-8. [Django Rest Framework Email Verification](https://saasitive.com/tutorial/django-rest-framework-email-verification/) (
-   tag [v8](https://github.com/saasitive/django-react-boilerplate/tree/v8))
-9. [Django Rest Framework Reset Password](https://saasitive.com/tutorial/django-rest-framework-reset-password/) (
-   tag [v9](https://github.com/saasitive/django-react-boilerplate/tree/v9))
+<a name="About"></a>
+## About
 
-More articles coming soon!
+<i>&lt;&lt;insert a fancy visual diagram here&gt;&gt;</i>
 
-## Screenshots
+Key tech things:
 
-<kbd><img src="https://raw.githubusercontent.com/saasitive/media/main/home_view.png" /></kbd>
+- AWS
+    - Rationale: 
+      - Cloud everything is a mystery to me
+      - All the cool kids are using AWS
+      - The learning curve between AWS and GCP is probably pretty low
+- Docker
+    - Rationale: Easy to deploy, develop and onboard
+    - Dockerfile for Django backend
+    - Dockerfile for ReactJs frontend
+    - Docker compose file orchestration (lingo? I don't understand)
+- PostgreSQL DB hosted on AWS
+    - Rationale: because it's what all the cool kids are doing?
+    - TBD: PostgreSQL DB will be hosted by AWS (lingo?)
+- Django
+    - Rationale:
+        - Python is easy to write (I have an unjustified dislike of Javascript)
+        - Django is easy to set up
+        - Framework focuses on modularization, which is important to me :)
+        - ORM features are pretty cool
+    - TBD: Fill out more details around backend architecture
+- ReactJs
+    - Rationale:
+        - Angular is better, but the learning curve is too high
+        - Flutter or other PWA frameworks aren't what I'm looking for (yet)
+    - TBD: Fill out more details around frontend architecture
+- Plaid
+    - Rationale: They are the defacto leaders in banking APIs and personal banking data
+    - Used to fetch user's personal banking data, currently only operating in sandbox mode
 
-<kbd><img src="https://raw.githubusercontent.com/saasitive/media/main/signup.png" /></kbd>
+<a name="setup"></a>
+## Setup
 
-<kbd><img src="https://raw.githubusercontent.com/saasitive/media/main/login.png" /></kbd>
+A shorthand guide on how to reuse this code and get your own fintech app up and running:
 
-<kbd><img src="https://raw.githubusercontent.com/saasitive/media/main/dashboard.png" /></kbd>
+- Install and setup Docker
+- Clone the repo and setup your IDE (I use IntelliJ, cool kids use VS Code).
+- Create a Plaid account
+- Set the following environment variables:
+    - plaid key 1
+    - plaid key 2
+    - TBD
+- `$ tbd.sh`
+- `$ open http://0.0.0.0`
+
+<a name="todo"></a>
+## TODO
+List of things to do (ordered):
+
+- <strike>Fork [SaaS Boilerplate](https://github.com/saasitive/django-react-boilerplate) and get it working</strike>
+- Get backend hot reloads to work in docker containers
+- Get frontend hot reloads to work in docker containers
+- Remove all secret things from the code base and use environment variables (lingo?)
+- Write a script hosting everything locally
+- Setup PostgreSQL DB on AWS
+- Switch from SQLite to PostgreSQL
+- Write a script to deploy everything to production
+- Write a github action/workflow (lingo?) to automatically roll out to production
+- Build connect plaid account screen
+- Build manage/remove plaid account screen
+- Build caching layer for Plaid data
+- Clean up venv, gitignore, pipfile, requirements.txt, package.json, yaml, pipenv, iml
+
