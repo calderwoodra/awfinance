@@ -9,17 +9,19 @@ services:
     ports:
       - 80:80
     volumes:
+      - .:/app
       - static_volume:/app/backend/server/django_static
       - ./docker/nginx/development:/etc/nginx/conf.d
+    environment:
+      - CHOKIDAR_USEPOLLING=true
     depends_on:
       - backend
+
   backend:
     restart: unless-stopped
     build:
       context: .
       dockerfile: ./docker/backend/Dockerfile
-    volumes:
-
     entrypoint: /app/docker/backend/wsgi-entrypoint.sh
     volumes:
       - .:/app

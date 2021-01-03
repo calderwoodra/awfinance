@@ -10,6 +10,7 @@ django-filter = "==2.4.0"
 django-cors-headers = "==3.6.0"
 Django = "==3.1.4"
 Markdown = "==3.3.3"
+plaid-python = "==7.2.0"
 
 [dev-packages]
 

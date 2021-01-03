@@ -6,6 +6,9 @@ import Home from "./components/Home";
 import Signup from "./components/signup/Signup";
 import Login from "./components/login/Login";
 import Dashboard from "./components/dashboard/Dashboard";
+import AccountsHome from "./components/accounts/AccountsHome";
+import AccountsManage from "./components/accounts/manage/AccountsManage";
+import AccountsConnect from "./components/accounts/connect/AccountsConnect";
 
 import requireAuth from "./utils/RequireAuth";
 
@@ -24,10 +27,16 @@ class App extends Component {
                 <Root>
                     <ToastContainer hideProgressBar={true} newestOnTop={true}/>
                     <Switch>
-                        <Route path="/signup" component={Signup}/>
-                        <Route path="/login" component={Login}/>
-                        <Route path="/dashboard"
+                        <Route path="/signup$" component={Signup}/>
+                        <Route path="/login$" component={Login}/>
+                        <Route path="/dashboard$"
                                component={requireAuth(Dashboard)}/>
+                        <Route path="/accounts/view"
+                               component={requireAuth(AccountsHome)}/>
+                        <Route path="/accounts/manage"
+                               component={requireAuth(AccountsManage)}/>
+                        <Route path="/accounts/connect"
+                               component={requireAuth(AccountsConnect)}/>
                         <Route exact path="/" component={Home}/>
                     </Switch>
                 </Root>

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "63fda9f42ca202ebe4c672ad29d647911f121be33d249690160ac22d713920c7"
+            "sha256": "007e344e1936c6610d147c3fd54216ec6f64e2822735de4d06344e38d0a47266"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -254,6 +254,13 @@
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==3.1.0"
         },
+        "plaid-python": {
+            "hashes": [
+                "sha256:bd599b384f94d8883344925f0ef223e1ab50f218872434aa40ba8c645937699c"
+            ],
+            "index": "pypi",
+            "version": "==7.2.0"
+        },
         "pycparser": {
             "hashes": [
                 "sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0",
@@ -306,7 +313,7 @@
                 "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259",
                 "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==1.15.0"
         },
         "social-auth-app-django": {
@@ -346,7 +353,7 @@
                 "sha256:19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08",
                 "sha256:d8ff90d979214d7b4f8ce956e80f4028fc6860e4431f731ea4a8c08f23f99473"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_full_version < '4.0.0'",
             "version": "==1.26.2"
         }
     },

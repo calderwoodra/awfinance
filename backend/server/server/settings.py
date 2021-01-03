@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'djoser',
     'corsheaders',
     #
-    'apps.accounts',
+    'apps.user',
     'apps.notes',
     'apps.plaid'
 ]
@@ -59,7 +59,7 @@ REST_FRAMEWORK = {
 }
 
 # Configure Custom User Model
-AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = 'user.User'
 
 # configure Djoser
 DJOSER = {
@@ -69,7 +69,7 @@ DJOSER = {
     "ACTIVATION_URL": "activate/{uid}/{token}",
     "PASSWORD_RESET_CONFIRM_URL": "reset_password/{uid}/{token}",
     'SERIALIZERS': {
-        'token_create': 'apps.accounts.serializers.CustomTokenCreateSerializer',
+        'token_create': 'apps.user.serializers.CustomTokenCreateSerializer',
     },
 }
 

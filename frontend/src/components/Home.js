@@ -16,6 +16,9 @@ class Home extends Component {
                 <p>
                     <Link to="/dashboard">Dashboard</Link>
                 </p>
+                <p>
+                    <Link to="/accounts/view">Accounts</Link>
+                </p>
             </Container>
         );
     }

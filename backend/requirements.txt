@@ -4,3 +4,4 @@ djangorestframework==3.11.2 # https://github.com/sunscrapers/djoser/issues/541
 django-filter==2.4.0
 django_cors_headers==3.6.0
 markdown==3.3.3
+plaid-python==7.2.0
