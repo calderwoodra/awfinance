@@ -12,8 +12,6 @@ services:
       - .:/app
       - static_volume:/app/backend/server/django_static
       - ./docker/nginx/development:/etc/nginx/conf.d
-    environment:
-      - CHOKIDAR_USEPOLLING=true
     depends_on:
       - backend
 
