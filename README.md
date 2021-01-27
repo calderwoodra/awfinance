@@ -68,16 +68,20 @@ A shorthand guide on how to reuse this code and get your own fintech app up and 
     - plaid key 1
     - plaid key 2
     - TBD
+- `$ cd /path/to/project/awsick && docker-compose -f docker-compose-dev.yml up --build`
 - `$ tbd.sh`
 - `$ open http://0.0.0.0`
+
+You can restart a specific image using:
+`$ docker-compose -f docker-compose-dev.yml up --build <image-name>`
 
 <a name="todo"></a>
 ## TODO
 List of things to do (ordered):
 
 - <strike>Fork [SaaS Boilerplate](https://github.com/saasitive/django-react-boilerplate) and get it working</strike>
-- Get backend hot reloads to work in docker containers
-- Get frontend hot reloads to work in docker containers
+- <string>Get backend hot reloads to work in docker containers<string>
+- <string>Get frontend hot reloads to work in docker containers<string>
 - Remove all secret things from the code base and use environment variables (lingo?)
 - Write a script hosting everything locally
 - Setup PostgreSQL DB on AWS
