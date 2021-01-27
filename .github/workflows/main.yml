@@ -27,6 +27,8 @@ jobs:
       
       - name: YAPF Python Code Formatter
         uses: block42-blockchain-company/yapf-action@v1.1
+        with:
+          args: --verbose --style='{based_on_style: google, indent_width: 2, column_limit: 100}'
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
