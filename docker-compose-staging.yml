@@ -22,7 +22,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/backend/Dockerfile
-    entrypoint: /app/docker/backend/dev-entrypoint.sh
+    entrypoint: /app/docker/backend/wsgi-entrypoint.sh
     volumes:
       - ./backend:/app/backend
       - static_volume:/app/backend/server/django_static
