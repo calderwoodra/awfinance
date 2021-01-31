@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     build:
       context: .
-      dockerfile: ./docker/nginx/development/Dockerfile
+      dockerfile: ./docker/nginx/staging/Dockerfile
     ports:
       # 3000, webpack server port, container port
       # 80, default / no port specified, local machine port
@@ -28,7 +28,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/backend/Dockerfile
-    entrypoint: /app/docker/backend/dev-entrypoint.sh
+    entrypoint: /app/docker/backend/wsgi-entrypoint.sh
     volumes:
       - ./backend:/app/backend
       - static_volume:/app/backend/server/django_static

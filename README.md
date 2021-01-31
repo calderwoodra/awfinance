@@ -65,27 +65,40 @@ A shorthand guide on how to reuse this code and get your own fintech app up and 
 - Clone the repo and setup your IDE (I use IntelliJ, cool kids use VS Code).
 - Create a Plaid account
 - Set the following environment variables:
-    - plaid key 1
-    - plaid key 2
-    - TBD
-- `$ tbd.sh`
-- `$ open http://0.0.0.0`
+    - RDS_PASSWORD
+    - RDS_HOSTNAME
+    - SECRET_KEY
+    - DJANGO_DEBUG
+- `$ cd /path/to/project/awsick && docker-compose -f docker-compose-dev.yml up --build`
+- `$ open http://localhost`
+
+You can restart a specific image using:
+`$ docker-compose -f docker-compose-dev.yml up --build <image-name>`
 
 <a name="todo"></a>
 ## TODO
 List of things to do (ordered):
 
+### Core Dev Tasks
 - <strike>Fork [SaaS Boilerplate](https://github.com/saasitive/django-react-boilerplate) and get it working</strike>
-- Get backend hot reloads to work in docker containers
-- Get frontend hot reloads to work in docker containers
-- Remove all secret things from the code base and use environment variables (lingo?)
-- Write a script hosting everything locally
-- Setup PostgreSQL DB on AWS
-- Switch from SQLite to PostgreSQL
-- Write a script to deploy everything to production
-- Write a github action/workflow (lingo?) to automatically roll out to production
+- <strike>Get backend hot reloads to work in docker containers</strike>
+- <strike>Get frontend hot reloads to work in docker containers</strike>
+- <strike>Remove all secret things from the code base and use .env variables</strike>
+- <strike>Setup PostgreSQL DB on AWS</strike>
+- <strike>Switch from SQLite to PostgreSQL</strike>
 - Build connect plaid account screen
 - Build manage/remove plaid account screen
 - Build caching layer for Plaid data
-- Clean up venv, gitignore, pipfile, requirements.txt, package.json, yaml, pipenv, iml
 
+### Productionization Tasks
+- Setup LetsEncrypt
+- Setup hosting/web domain
+- Setup docker-compose-prod.yml
+
+### Polish Tasks
+- Update README with setup/getting started steps
+- Write a script hosting everything locally
+- Write a script to deploy everything to production
+- Write a github action/workflow (lingo?) to automatically roll out to production
+- Clean up gitignore, yaml, iml
+- <strike>Clean up venv, pipfile, requirements.txt, package.json, pipenv</strike>
