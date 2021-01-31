@@ -19,6 +19,12 @@ services:
 
   backend:
     restart: unless-stopped
+    # Required keys:
+    # - RDS_PASSWORD
+    # - RDS_HOSTNAME
+    # - SECRET_KEY
+    # - DJANGO_DEBUG
+    env_file: .env.dev
     build:
       context: .
       dockerfile: ./docker/backend/Dockerfile
@@ -28,17 +34,6 @@ services:
       - static_volume:/app/backend/server/django_static
     expose:
       - 8000
-    depends_on:
-      - db
-
-  db:
-    image: postgres
-    restart: always
-    environment:
-      POSTGRES_PASSWORD: example
-    volumes:
-      - pgdata:/var/lib/postgresql/data
 
 volumes:
   static_volume: { }
-  pgdata: { }
