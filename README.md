@@ -96,6 +96,7 @@ List of things to do (ordered):
 - Setup docker-compose-prod.yml
 
 ### Polish Tasks
+- Setup [YAPF](https://github.com/google/yapf) [pre-commit](https://github.com/pre-commit/pre-commit) hook.
 - Update README with setup/getting started steps
 - Write a script hosting everything locally
 - Write a script to deploy everything to production
