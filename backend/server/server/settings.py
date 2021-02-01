@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     #
     'apps.user',
     'apps.notes',
-    'apps.plaid'
+    'apps.accounts'
 ]
 
 # configure DRF

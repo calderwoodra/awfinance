@@ -2,10 +2,10 @@ import React, {Component} from "react";
 import {Container, Nav, Navbar} from "react-bootstrap";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
-import {logout} from "../../login/LoginActions";
+import {logout} from "../login/LoginActions";
 import {withRouter} from "react-router-dom";
 
-class AccountsConnect extends Component {
+class AccountsManage extends Component {
     onLogout = () => {
         this.props.logout();
     };
@@ -25,14 +25,14 @@ class AccountsConnect extends Component {
                     </Navbar.Collapse>
                 </Navbar>
                 <Container>
-                    <h1>Connect Account</h1>
+                    <h1>Manage Accounts</h1>
                 </Container>
             </div>
         );
     }
 }
 
-AccountsConnect.propTypes = {
+AccountsManage.propTypes = {
     logout: PropTypes.func.isRequired,
     auth: PropTypes.object.isRequired
 };
@@ -41,4 +41,4 @@ const mapStateToProps = state => ({
     auth: state.auth
 });
 
-export default connect(mapStateToProps, {logout})(withRouter(AccountsConnect));
+export default connect(mapStateToProps, {logout})(withRouter(AccountsManage));
